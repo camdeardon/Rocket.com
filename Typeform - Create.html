@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Typeform</title><meta name="msapplication-TileColor" content="#000000"/><meta name="msapplication-config" content="https://public-assets.typeform.com/public/favicon/browserconfig.xml"/><meta name="theme-color" content="#131313"/><link rel="apple-touch-icon" sizes="180x180" href="https://public-assets.typeform.com/public/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="https://public-assets.typeform.com/public/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="https://public-assets.typeform.com/public/favicon/favicon-16x16.png"/><link rel="manifest" href="https://public-assets.typeform.com/public/favicon/site.webmanifest"/><link rel="shortcut icon" href="https://public-assets.typeform.com/public/favicon/favicon.ico"/><link rel="mask-icon" href="https://public-assets.typeform.com/public/favicon/safari-pinned-tab.svg" color="#000000"/><script>window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500,
+      });</script><link href="https://font.typeform.com/dist/font.css" rel="stylesheet"/><script>var _rollbarConfig = {
+        accessToken: 'ed2a2cc39d674e279262d6bc8d94915c',
+        hostSafeList: ['typeform.com'],
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+            environment: 'tfprod',
+        }
+      }
+      // Rollbar Snippet
+      !function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(5);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.23.0/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2),t=o(3);function a(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var l=0;function i(r,e){this.options=r,this._rollbarOldOnError=null;var o=l++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var s=o(4),d=function(r,e){return new i(r,e)},c=function(r){return new s(d,r)};function u(r){return a((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}i.prototype.loadFull=function(r,e,o,n,t){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=a((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,a,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(a=n.args||[],i=0;i<a.length;++i)if("function"==typeof(l=a[i])){l(e);break}}"function"==typeof t&&t(e)}()}})),d.insertBefore(i,s)},i.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<p.length;++f)i.prototype[p[f]]=u(p[f]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var l=new c(e);return a((function(){e.captureUncaught&&(l._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,l,!0),e.wrapGlobalEventHandlers&&t(r,l,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,l,!0);var a=e.autoInstrument;return!1!==e.enabled&&(void 0===a||!0===a||"object"==typeof a&&a.network)&&r.addEventListener&&(r.addEventListener("load",l.captureLoad.bind(l)),r.addEventListener("DOMContentLoaded",l.captureDomContentLoaded.bind(l))),r[o]=l,l}))()}},Rollbar:c}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}}},function(r,e,o){"use strict";function n(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports=function(r,e,o){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&n(e,r[a].prototype,o)}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+      // End Rollbar Snippet</script><style>html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      #root:not(:empty) + .loading-container {
+        display: none;
+      }
+
+      .loading-container{
+        height: 100%;
+      }
+
+      .placeholder-header {
+        height: 48px;
+        padding-left: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 1024px) {
+        .placeholder-header {
+          height: 64px;
+        }
+      }
+      .placeholder-svg-wrapper {
+        margin-top: 4px;
+      }
+      .placeholder-svg-wrapper svg {
+        display: block;
+      }
+      .placeholder-content {
+        height: calc(100% - 48px);
+        min-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        font-family: "Gt America Web", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(76, 76, 76);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-font-feature-settings: "ss01";
+        font-feature-settings: "ss01";
+        -webkit-font-smoothing: antialiased;
+      }
+      @-webkit-keyframes placeholder-spinner-rotation {
+        0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+      }
+      @keyframes placeholder-spinner-rotation {
+        0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+      }
+      .placeholder-content span {
+        margin-left: 8px;
+      }
+      .placeholder-spinner {
+        width: 20px;
+        height: 20px;
+        border-style: solid;
+        border-color: rgb(76, 76, 76) rgb(76, 76, 76) rgb(211, 211, 211) rgb(211, 211, 211);
+        border-width: 2px;
+        border-radius: 50%;
+        -webkit-animation: placeholder-spinner-rotation 0.8s linear 0s infinite normal none running;
+        animation: placeholder-spinner-rotation 0.8s linear 0s infinite normal none running;
+      }</style><script defer="defer" src="https://public-assets.typeform.com/app-shell/vendor.js"></script><script defer="defer" src="https://public-assets.typeform.com/app-shell/app-shell.js"></script></head><body><noscript>You need to enable JavaScript to run Typeform.</noscript><div id="root"></div><div class="loading-container"><div class="placeholder-header"><div class="placeholder-svg-wrapper"><svg width="72" height="16" viewBox="0 0 245 55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M158.248 38.0664C153.148 38.0664 150.529 33.8672 150.529 28.7095C150.529 23.5519 153.102 19.5809 158.248 19.5809C163.486 19.5809 165.968 23.7344 165.968 28.7095C165.922 33.9585 163.303 38.0664 158.248 38.0664ZM108.348 19.5809C111.334 19.5809 112.575 21.3154 112.575 22.8216C112.575 26.473 108.853 28.0705 101.088 28.2988C101.088 23.7801 103.661 19.5809 108.348 19.5809ZM75.2644 38.0664C70.4398 38.0664 68.418 34.1411 68.418 28.7095C68.418 23.3237 70.4857 19.5809 75.2644 19.5809C80.135 19.5809 82.4325 23.4606 82.4325 28.7095C82.4325 34.1867 80.0431 38.0664 75.2644 38.0664ZM34.4617 14.2407H26.9261L39.4242 42.9046C37.0349 48.1992 35.7483 49.5228 34.0941 49.5228C32.3481 49.5228 30.6939 48.1079 29.4992 46.8755L26.1909 51.2573C28.4424 53.6307 31.521 55 34.6915 55C38.6431 55 41.6757 52.7178 43.4218 48.61L57.8498 14.195H50.452L42.9164 34.7344L34.4617 14.2407ZM234.064 19.5809C237.74 19.5809 238.475 22.0913 238.475 27.9793V43.4523H245V23.917C245 16.888 240.175 13.8299 235.718 13.8299C231.767 13.8299 228.137 16.2946 226.115 20.8589C224.966 16.4772 221.29 13.8299 217.017 13.8299C213.295 13.8299 209.573 16.2033 207.552 20.6307V14.2407H201.027V43.4066H207.552V30.9461C207.552 24.6473 210.86 19.5809 215.363 19.5809C219.039 19.5809 219.728 22.0913 219.728 27.9793V43.4523H226.253L226.207 30.9461C226.207 24.6473 229.561 19.5809 234.064 19.5809ZM182 14.2407H178.696V43.4066H185.22V32.2241C185.22 25.1494 188.345 20.3568 192.986 20.3568C194.18 20.3568 195.191 20.4025 196.294 20.8589L197.305 13.9668C196.478 13.8755 195.743 13.7842 195.007 13.7842C190.413 13.7842 187.104 16.9336 185.174 20.9959V14.2407H182ZM158.248 13.7842C149.61 13.7842 143.774 20.3568 143.774 28.6639C143.774 37.2905 149.702 43.7261 158.248 43.7261C166.933 43.7261 172.86 37.1079 172.86 28.6639C172.814 20.3112 166.795 13.7842 158.248 13.7842ZM108.715 38.0664C105.315 38.0664 102.788 36.332 101.731 32.8174C110.369 32.4523 118.824 30.3527 118.824 22.7303C118.824 18.3485 114.505 13.8299 108.302 13.8299C99.939 13.8299 94.2873 20.6307 94.2873 28.7095C94.2873 37.1535 99.8471 43.7718 108.164 43.7718C113.953 43.7718 117.629 41.444 120.524 38.0664L117.354 33.7759C113.999 37.1992 111.932 38.0664 108.715 38.0664ZM76.551 13.7842C73.2427 13.7842 69.9344 15.7012 68.6478 18.7137V14.2407H62.123V54.8631H68.6478V40.3485C70.0263 42.4481 73.1967 43.8174 75.9996 43.8174C84.684 43.8174 89.2789 37.3817 89.2789 28.7095C89.2329 20.1286 84.7299 13.7842 76.551 13.7842ZM30.7858 2.55602H0V8.90042H12.0386V43.4066H18.885V8.90042H30.7858V2.55602ZM127.784 14.2407H123.878V20.083H127.784V43.4066H134.309V20.083H140.65V14.2407H134.309V9.67635C134.309 6.75519 135.504 5.75104 138.215 5.75104C139.225 5.75104 140.144 6.0249 141.385 6.43568L142.855 0.958506C141.661 0.273859 139.271 0 137.709 0C131.46 0 127.784 3.74274 127.784 10.2241V14.2407Z" fill="#262627"/></svg></div></div><div class="placeholder-content"><div class="placeholder-spinner"></div></div></div></body></html>

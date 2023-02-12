@@ -1,0 +1,156 @@
+<style>
+    body {
+        background-color: white;
+    }
+
+    .header {
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .header .logo {
+        margin: 0;
+        width: 250px;
+        height: 250px;
+    }
+
+    .stripe {
+        width: 100%;
+        height: 100px;
+        background-color: #00614e;
+    }
+
+    .user-profile-box {
+        background-color: white;
+        padding: 20px;
+        width: 300px;
+        height: 150px;
+        box-shadow: 0px 0px 10px #888888;
+        border-radius: 10px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .user-profile-box h3 {
+        color: #00614e;
+        margin-bottom: 20px;
+    }
+    .user-profile-box p {
+        color: #00614e;
+        margin-bottom: 10px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+    }
+    .logo {
+        width: 150px;
+        height: 150px;
+        background-image: url("https://axonify.com/wp-content/themes/axonify/img/logo.svg");
+        background-size;
+        background-repeat: no-repeat;
+    }
+    .card {
+        background-color: white;
+        padding: 20px;
+        width: 300px;
+        height: 400px;
+        box-shadow: 0px 0px 10px #888888;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    .card h2 {
+        color: #00614e;
+        margin-bottom: 20px;
+    }
+    .card p {
+        color: #00614e;
+        margin-bottom: 10px;
+    }
+    .card-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .card-list li {
+        border-bottom: 1px solid #cccccc;
+        padding: 10px 0;
+    }
+    .card-list li:last-child {
+        border-bottom: none;
+    }
+    .card-list a {
+        color: #00614e;
+        text-decoration: none;
+    }
+    .card-list a:hover {
+        text-decoration: underline;
+    }
+    .completed-topics {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 70%;
+        padding: 20px;
+        
+    }
+    .completed-topic {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #00614e;
+        
+    }
+</style>
+<body>
+    <div class="stripe"></div>
+    <div class="header">
+        <div class="logo"></div>
+        <div class="user-profile-boxes">
+            <div class="box">
+                <h3>Full Name</h3>
+                <p>{{ training_details.userProfile.fullName }}</p>
+            </div>
+            <div class="box">
+                <h3>Available Points</h3>
+                <p>{{ training_details.availablePoints }}</p>
+            </div>
+            <div class="box">
+                <h3>Training Sessions Last 30 Days</h3>
+                <p>{{ training_details.userProfile.trainingSessionsLast30Days }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>To Do</h2>
+            <ul class="card-list">
+                {% for record in data["knowledgeRecords"] %}
+                {% if record["trainingModuleCompleted"] != "Y" %}
+                <li>
+                    <a href="#">{{ record.topicDetails.topicName }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="completed-topics">
+            <h2>Completed in the last 30 days</h2>
+            <ul class="completed-topic-list">
+                {% for record in data["knowledgeRecords"] %}
+                {% if record["topicGraduationTimestamp"] and record["topicGraduationTimestamp"] >= seven_days_ago %}
+                <li class="completed-topic">{{ record.topicDetails.topicName }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
